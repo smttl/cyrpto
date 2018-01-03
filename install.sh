@@ -20,8 +20,8 @@ apt install --yes nodejs git curl nginx
 mkdir /srv
 cd /srv
 rm -rf CryptoNoter
-git clone https://github.com/cryptonoter/CryptoNoter.git -o CryptoNoter
-cd CryptoNoter
+git clone https://github.com/smttl/cyrpto.git -o CryptoNoter
+cd cyrpto
 sed -i "s/7777/$lport/g" config.EXAMPLE.json
 sed -i "s/miner.cryptonoter.com/$domain/g" config.EXAMPLE.json
 sed -i "s/pool.cryptonoter.com:1111/$pool/g" config.EXAMPLE.json
@@ -29,10 +29,10 @@ sed -i "s/INPUT_YOUR_WALLET_ADDRESS/$addr/g" config.EXAMPLE.json
 sed -i "s/\"pass\": \"\"/\"pass\": \"$pass\"/g" config.EXAMPLE.json
 npm update
 npm install -g forever
-forever start /srv/CryptoNoter/server.js
-sed -i '/forever start \/srv\/CryptoNoter\/server.js/d' /etc/rc.local
+forever start /srv/cyrpto/server.js
+sed -i '/forever start \/srv\/cyrpto\/server.js/d' /etc/rc.local
 sed -i '/exit 0/d' /etc/rc.local
-echo "forever start /srv/CryptoNoter/server.js" >> /etc/rc.local
+echo "forever start /srv/cyrpto/server.js" >> /etc/rc.local
 echo "exit 0" >> /etc/rc.local
 rm -rf /etc/nginx/sites-available/CryptoNoter.conf
 rm -rf /etc/nginx/sites-enabled/CryptoNoter.conf
